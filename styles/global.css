@@ -18,8 +18,8 @@ html {
 
     --gray-dark: #4D5E77;
     --gray-blue: #A1B2CD;
-    --gray-medium: #D3D9E2;
     --gray-light: #E5EAF1;
+    --gray-medium: #eaecf1;
 
     font-size: 65.5%;
 }
@@ -88,6 +88,18 @@ button.outilined,
     background: var(--white);
     color: var(--blue);
     border: .2rem solid  var(--blue)
+}
+
+button.red,
+.button.red {
+    background: var(--red);
+    color: var(--white);
+}
+
+button.gray,
+.button.gray {
+    background: var(--gray-light);
+    color: var(--gray-dark);
 }
 
 .content header {
