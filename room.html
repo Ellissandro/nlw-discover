@@ -18,8 +18,6 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap"
             rel="stylesheet"
         />
-
-         <script src="scripts/main.js" defer type="module"></script>
     </head>
     <body>
         <div id="room" class="content">
@@ -28,13 +26,13 @@
                     <img src="assets/logo.svg" alt="Rocket.Q Logo" />
                 </a>
                 <div class="buttons">
-                    <div class="button outilined">
+                    <div class="button outilined" id="room-id" data-id="323243">
                         #323243
                         <img src="assets/copy.svg" alt="Copiar" />
                     </div>
 
                     <a href="#" class="button">
-                        <img src="/assets/users-white.svg" alt="Criar Sala" />
+                        <img src="assets/users-white.svg" alt="Criar Sala" />
                         Criar Sala
                     </a>
                 </div>
@@ -181,7 +179,7 @@
                 <h2>Excluir pergunta</h2>
                 <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-                <form action="#">
+                <form action="#" method="POST">
                     <label class="sr-only" for="password"
                         >Digite sua senha admin</label
                     >
@@ -193,11 +191,12 @@
                     />
 
                     <div class="buttons">
-                        <div class="button gray">Cancelar</div>
+                        <div class="button gray cancel">Cancelar</div>
                         <button class="red">Sim, excluir</button>
                     </div>
                 </form>
             </div>
         </div>
+        <script src="scripts/main.js" defer type="module"></script>
     </body>
 </html>
