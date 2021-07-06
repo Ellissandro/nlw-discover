@@ -7,9 +7,9 @@
 
         <title>Perguntas - Rocket.Q</title>
 
-        <link rel="stylesheet" href="styles/global.css" />
-        <link rel="stylesheet" href="styles/room.css" />
-        <link rel="stylesheet" href="styles/modal.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/room.css" />
+        <link rel="stylesheet" href="/styles/modal.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,18 +19,22 @@
             rel="stylesheet"
         />
 
-        <script src="scripts/main.js" defer type="module"></script>
+        <script src="/scripts/main.js" defer type="module"></script>
     </head>
     <body>
         <div id="room" class="content">
             <header>
-                <a href="#">
-                    <img src="images/logo.svg" alt="Rocket.Q Logo" />
+                <a href="/">
+                    <img src="/images/logo.svg" alt="Rocket.Q Logo" />
                 </a>
                 <div class="buttons">
-                    <div class="button outilined" id="room-id" data-id="323243">
-                        #323243
-                        <img src="images/copy.svg" alt="Copiar" />
+                    <div
+                        class="button outilined"
+                        id="room-id"
+                        data-id="<%= roomId %>"
+                    >
+                        #<%= roomId %>
+                        <img src="/images/copy.svg" alt="Copiar" />
                     </div>
 
                     <a href="#" class="button">
@@ -43,7 +47,7 @@
             <main>
                 <section id="question-form">
                     <h2>Faça sua pergunta</h2>
-                    <form action="">
+                    <form action="/question/create/<%= roomId %>" method="POST">
                         <label for="question" class="sr-only"
                             >O que você quer perguntar</label
                         >
@@ -55,7 +59,7 @@
 
                         <footer>
                             <div>
-                                <img src="images/lock.svg" alt="Cadeado" />
+                                <img src="/images/lock.svg" alt="Cadeado" />
                                 Esta pergunta é anônima
                             </div>
                             <button>Enviar</button>
@@ -70,7 +74,7 @@
                         <div class="question-wrapper">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="images/user.svg" alt="Avatar" />
+                                    <img src="/images/user.svg" alt="Avatar" />
                                 </div>
                                 <div class="question">
                                     <p>
@@ -80,15 +84,18 @@
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check">
+                                <a href="#" class="check" data-id="2">
                                     <img
-                                        src="images/check.svg"
+                                        src="/images/check.svg"
                                         alt="Marcar como lida"
                                     />
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete">
-                                    <img src="images/trash.svg" alt="Excluir" />
+                                <a href="#" class="delete" data-id="2">
+                                    <img
+                                        src="/images/trash.svg"
+                                        alt="Excluir"
+                                    />
                                     Excluir
                                 </a>
                             </div>
@@ -97,22 +104,25 @@
                         <div class="question-wrapper">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="images/user.svg" alt="Avatar" />
+                                    <img src="/images/user.svg" alt="Avatar" />
                                 </div>
                                 <div class="question">
                                     <p>O que é Typescript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check">
+                                <a href="#" class="check" data-id="3">
                                     <img
-                                        src="images/check.svg"
+                                        src="/images/check.svg"
                                         alt="Marcar como lida"
                                     />
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete">
-                                    <img src="images/trash.svg" alt="Excluir" />
+                                <a href="#" class="delete" data-id="3">
+                                    <img
+                                        src="/images/trash.svg"
+                                        alt="Excluir"
+                                    />
                                     Excluir
                                 </a>
                             </div>
@@ -121,7 +131,7 @@
                         <div class="question-wrapper">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="images/user.svg" alt="Avatar" />
+                                    <img src="/images/user.svg" alt="Avatar" />
                                 </div>
                                 <div class="question">
                                     <p>
@@ -141,15 +151,18 @@
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="check">
+                                <a href="#" class="check" data-id="4">
                                     <img
-                                        src="images/check.svg"
+                                        src="/images/check.svg"
                                         alt="Marcar como lida"
                                     />
                                     Marcar como lida
                                 </a>
-                                <a href="#" class="delete">
-                                    <img src="images/trash.svg" alt="Excluir" />
+                                <a href="#" class="delete" data-id="4">
+                                    <img
+                                        src="/images/trash.svg"
+                                        alt="Excluir"
+                                    />
                                     Excluir
                                 </a>
                             </div>
@@ -158,15 +171,18 @@
                         <div class="question-wrapper read">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="images/user.svg" alt="Avatar" />
+                                    <img src="/images/user.svg" alt="Avatar" />
                                 </div>
                                 <div class="question">
                                     <p>O que é Javascript?</p>
                                 </div>
                             </div>
                             <div class="actions">
-                                <a href="#" class="delete">
-                                    <img src="images/trash.svg" alt="Excluir" />
+                                <a data-id="1" href="#" class="delete">
+                                    <img
+                                        src="/images/trash.svg"
+                                        alt="Excluir"
+                                    />
                                     Excluir
                                 </a>
                             </div>
